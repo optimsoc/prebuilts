@@ -21,7 +21,7 @@ prebuilts = {
               "value": "{base}/bin" },
             { "var": "LD_LIBRARY_PATH",
               "type": "list-prepend",
-              "value": "{base}/x86_64-unknown-linux-gnu/or1k-elf/lib"}
+              "value": "{base}/x86_64-unknown-linux-gnu/or1k-elf/lib" }
         ]
     },
     "systemc": {
@@ -34,10 +34,13 @@ prebuilts = {
             { "var": "PKG_CONFIG_PATH",
               "type": "list-prepend",
               "value": "{base}/lib-linux64/pkgconfig" },
+            { "var": "LD_LIBRARY_PATH",
+              "type": "list-prepend",
+              "value": "{base}/lib-linux64" },
             { "var": "SYSTEMC_INCLUDE",
-              "value": "{base}/include"},
+              "value": "{base}/include" },
             { "var": "SYSTEMC_LIBDIR",
-              "value": "{base}/lib-linux64"}
+              "value": "{base}/lib-linux64" }
         ]
     },
     "verilator": {
