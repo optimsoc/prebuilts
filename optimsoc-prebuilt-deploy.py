@@ -24,7 +24,7 @@ prebuilts = {
     "verilator": {
         "name": "verilator-3.882",
         "tgz": "verilator-3.882.tgz",
-        "url": "https://raw.githubusercontent.com/optimsoc/prebuilts/master/",
+        "url": "https://github.com/optimsoc/prebuilts/releases/download/v2016.1/",
         "dest": "prebuilt",
         "relocate": "relocate.sh",
         "env": [
