@@ -11,17 +11,14 @@ else:
 prebuilts = {
     "or1kelf": {
         "name": "or1k-elf-multicore",
-        "tgz": "or1k-elf-multicore-latest-ubuntu-{ubuntu_release}-amd64.tgz",
-        "url": "http://lis.ei.tum.de/pub-download/openrisc-builds/or1k-elf/dev/",
+        "tgz": "or1k-elf-multicore_gcc5.3.0_binutils2.26_newlib2.3.0-1_gdb7.11.tgz",
+        "url": "https://github.com/openrisc/newlib/releases/download/v2.3.0-1/",
         "tar_extra": "--strip-components=1",
         "dest": "toolchains",
         "env": [
             { "var": "PATH",
               "type": "list-prepend",
-              "value": "{base}/bin" },
-            { "var": "LD_LIBRARY_PATH",
-              "type": "list-prepend",
-              "value": "{base}/x86_64-unknown-linux-gnu/or1k-elf/lib" }
+              "value": "{base}/bin" }
         ]
     },
     "systemc": {
