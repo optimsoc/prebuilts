@@ -21,8 +21,8 @@ prebuilts = {
         ]
     },
     "verilator": {
-        "name": "verilator-3.882",
-        "tgz": "verilator-3.882.tgz",
+        "name": "verilator-3.882git80678ae7",
+        "tgz": "verilator-3.882git80678ae7.tgz",
         "url": "https://github.com/optimsoc/prebuilts/releases/download/v2016.1/",
         "dest": "prebuilt",
         "relocate": "relocate.sh",
@@ -34,7 +34,7 @@ prebuilts = {
               "value": "{base}/bin" },
             { "var": "PKG_CONFIG_PATH",
               "type": "list-prepend",
-              "value": "{base}/pkgconfig" }
+              "value": "{base}/share/pkgconfig" }
         ]
     }
 }
