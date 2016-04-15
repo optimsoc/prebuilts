@@ -49,8 +49,6 @@ if __name__ == '__main__':
     parser = OptionParser(usage=usage, epilog=epilog)
     parser.add_option("-d", "--destination", dest="dest",
                       help="destination folder", default="/opt/optimsoc")
-    parser.add_option("-r", "--ubuntu-release", dest="ubuntu_release",
-                      help="Ubuntu Release", default="14.04")
 
     (options, args) = parser.parse_args()
 
@@ -71,7 +69,7 @@ if __name__ == '__main__':
         p = prebuilts[key]
 
         print(" + Download")
-        tgz = p["tgz"].format(ubuntu_release=options.ubuntu_release)
+        tgz = p["tgz"]
         url = "{}/{}".format(p["url"], tgz)
         tmp = "/tmp/{}".format(tgz)
         urlretrieve(url, tmp)
