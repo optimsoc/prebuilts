@@ -21,25 +21,6 @@ prebuilts = {
               "value": "{base}/bin" }
         ]
     },
-    "systemc": {
-        "name": "systemc-2.3.1",
-        "tgz": "systemc-2.3.1.tgz",
-        "url": "https://raw.githubusercontent.com/optimsoc/prebuilts/master/",
-        "dest": "prebuilt",
-        "relocate": "relocate.sh",
-        "env": [
-            { "var": "PKG_CONFIG_PATH",
-              "type": "list-prepend",
-              "value": "{base}/lib-linux64/pkgconfig" },
-            { "var": "LD_LIBRARY_PATH",
-              "type": "list-prepend",
-              "value": "{base}/lib-linux64" },
-            { "var": "SYSTEMC_INCLUDE",
-              "value": "{base}/include" },
-            { "var": "SYSTEMC_LIBDIR",
-              "value": "{base}/lib-linux64" }
-        ]
-    },
     "verilator": {
         "name": "verilator-3.882",
         "tgz": "verilator-3.882.tgz",
