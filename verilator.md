@@ -2,7 +2,7 @@ Built in place on Ubuntu 14.04 using:
 
     ./configure --prefix=/opt/verilator-<version>
     make
-	make installdata
+    make installdata
 
 We distribute the source tree (recommended method), but need to
 install the data into the proper place. We add the relocate script to
