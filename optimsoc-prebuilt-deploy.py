@@ -51,6 +51,9 @@ if __name__ == '__main__':
 
     (options, args) = parser.parse_args()
 
+    options.dest = os.path.abspath(options.dest)
+    print("Installing OpTiMSoC prebuilts to {}".format(options.dest))
+
     if "all" not in args:
         for p in list(prebuilts):
             if p not in args:
@@ -115,10 +118,10 @@ if __name__ == '__main__':
                 line = "export {}={}".format(env["var"], value)
                 setup_sh.append(line)
 
-    print("Write setup_prebuilt.sh")
+    envscript_file = os.path.join(options.dest, 'setup_prebuilt.sh')
+    print("Write "+envscript_file)
 
-    envscript = open("{}/setup_prebuilt.sh".format(options.dest), "w")
-    envscript.write("\n".join(setup_sh) + "\n")
-    envscript.close()
+    with open("{}/setup_prebuilt.sh".format(options.dest), "w") as envscript:
+        envscript.write("\n".join(setup_sh) + "\n")
 
     print("Done")
